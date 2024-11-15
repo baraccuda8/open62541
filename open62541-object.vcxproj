@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1C6F5E4A-B5D1-3BDF-B40A-AB916DCECCC4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>open62541-object</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\Bin\Lib\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\Bin\Dir\$(ProjectName).dir\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Bin\Lib\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Bin\Dir\$(ProjectName).dir\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\arch;.\src;.\arch\win32;.\include;.\plugins\include;.\deps;.\src\pubsub;.\src_generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w44996</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UA_DYNAMIC_LINKING_EXPORT;UA_ARCHITECTURE_WIN32;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UA_DYNAMIC_LINKING_EXPORT;UA_ARCHITECTURE_WIN32;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;arch;arch\win32;include;plugins\include;deps;src\pubsub;Build\src_generated;Build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;arch;arch\win32;include;plugins\include;deps;src\pubsub;Build\src_generated;Build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\arch;.\src;.\arch\win32;.\include;.\plugins\include;.\deps;.\src\pubsub;.\src_generated;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /w44996</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UA_DYNAMIC_LINKING_EXPORT;UA_ARCHITECTURE_WIN32;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UA_DYNAMIC_LINKING_EXPORT;UA_ARCHITECTURE_WIN32;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;arch;arch\win32;include;plugins\include;deps;src\pubsub;Build\src_generated;Build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>src;arch;arch\win32;include;plugins\include;deps;src\pubsub;Build\src_generated;Build;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ua_types.c" />
+    <ClCompile Include="src\ua_types_encoding_binary.c" />
+    <ClCompile Include="src\ua_types_print.c" />
+    <ClCompile Include="src_generated\open62541\types_generated.c" />
+    <ClCompile Include="src_generated\open62541\transport_generated.c" />
+    <ClCompile Include="src_generated\open62541\statuscodes.c" />
+    <ClCompile Include="src\ua_util.c" />
+    <ClCompile Include="src\ua_timer.c" />
+    <ClCompile Include="src\ua_connection.c" />
+    <ClCompile Include="src\ua_securechannel.c" />
+    <ClCompile Include="src\ua_securechannel_crypto.c" />
+    <ClCompile Include="src\server\ua_session.c" />
+    <ClCompile Include="src\server\ua_nodes.c" />
+    <ClCompile Include="src\server\ua_server.c" />
+    <ClCompile Include="src\server\ua_server_ns0.c" />
+    <ClCompile Include="src\server\ua_server_ns0_diagnostics.c" />
+    <ClCompile Include="src\server\ua_server_config.c" />
+    <ClCompile Include="src\server\ua_server_binary.c" />
+    <ClCompile Include="src\server\ua_server_utils.c" />
+    <ClCompile Include="src\server\ua_server_discovery.c" />
+    <ClCompile Include="src\server\ua_server_async.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_networkmessage.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_writer.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_writergroup.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_reader.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_readergroup.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_manager.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_ns0.c" />
+    <ClCompile Include="src\server\ua_services_view.c" />
+    <ClCompile Include="src\server\ua_services_method.c" />
+    <ClCompile Include="src\server\ua_services_session.c" />
+    <ClCompile Include="src\server\ua_services_attribute.c" />
+    <ClCompile Include="src\server\ua_services_discovery.c" />
+    <ClCompile Include="src\server\ua_services_subscription.c" />
+    <ClCompile Include="src\server\ua_services_monitoreditem.c" />
+    <ClCompile Include="src\server\ua_services_securechannel.c" />
+    <ClCompile Include="src\server\ua_services_nodemanagement.c" />
+    <ClCompile Include="src\server\ua_services_discovery_multicast.c" />
+    <ClCompile Include="src\client\ua_client.c" />
+    <ClCompile Include="src\client\ua_client_connect.c" />
+    <ClCompile Include="src\client\ua_client_discovery.c" />
+    <ClCompile Include="src\client\ua_client_highlevel.c" />
+    <ClCompile Include="src\client\ua_client_subscriptions.c" />
+    <ClCompile Include="deps\libc_time.c" />
+    <ClCompile Include="deps\pcg_basic.c" />
+    <ClCompile Include="deps\base64.c" />
+    <ClCompile Include="deps\aa_tree.c" />
+    <ClCompile Include="deps\ziptree.c" />
+    <ClCompile Include="src\pubsub\ua_pubsub_config.c" />
+    <ClCompile Include="src_generated\open62541\namespace0_generated.c" />
+    <ClCompile Include="src\ua_types_lex.c" />
+    <ClCompile Include="src\server\ua_subscription.c" />
+    <ClCompile Include="src\server\ua_subscription_monitoreditem.c" />
+    <ClCompile Include="src\server\ua_subscription_datachange.c" />
+    <ClCompile Include="src\server\ua_subscription_events.c" />
+    <ClCompile Include="src\server\ua_subscription_events_filter.c" />
+    <ClInclude Include="deps\open62541_queue.h" />
+    <ClInclude Include="deps\pcg_basic.h" />
+    <ClInclude Include="deps\libc_time.h" />
+    <ClInclude Include="deps\base64.h" />
+    <ClInclude Include="src\ua_types_encoding_binary.h" />
+    <ClInclude Include="src\ua_util_internal.h" />
+    <ClInclude Include="src_generated\open62541\transport_generated.h" />
+    <ClInclude Include="src_generated\open62541\transport_generated_handling.h" />
+    <ClInclude Include="src\ua_connection_internal.h" />
+    <ClInclude Include="src\ua_securechannel.h" />
+    <ClInclude Include="src\ua_timer.h" />
+    <ClInclude Include="src\server\ua_session.h" />
+    <ClInclude Include="src\server\ua_subscription.h" />
+    <ClInclude Include="src\pubsub\ua_pubsub_networkmessage.h" />
+    <ClInclude Include="src\pubsub\ua_pubsub.h" />
+    <ClInclude Include="src\pubsub\ua_pubsub_manager.h" />
+    <ClInclude Include="src\pubsub\ua_pubsub_ns0.h" />
+    <ClInclude Include="src\server\ua_server_async.h" />
+    <ClInclude Include="src\server\ua_server_internal.h" />
+    <ClInclude Include="src\server\ua_services.h" />
+    <ClInclude Include="src\client\ua_client_internal.h" />
+    <ClInclude Include="src\pubsub\ua_pubsub_config.h" />
+    <ClInclude Include="src_generated\open62541\namespace0_generated.h" />
+    <ClInclude Include="src_generated\open62541\config.h" />
+    <ClInclude Include="deps\ms_stdint.h" />
+    <ClInclude Include="include\open62541\architecture_definitions.h" />
+    <ClInclude Include="arch\win32\ua_architecture.h" />
+    <ClInclude Include="src_generated\open62541\statuscodes.h" />
+    <ClInclude Include="src_generated\open62541\nodeids.h" />
+    <ClInclude Include="include\open62541\common.h" />
+    <ClInclude Include="include\open62541\types.h" />
+    <ClInclude Include="src_generated\open62541\types_generated.h" />
+    <ClInclude Include="src_generated\open62541\types_generated_handling.h" />
+    <ClInclude Include="include\open62541\util.h" />
+    <ClInclude Include="include\open62541\plugin\log.h" />
+    <ClInclude Include="include\open62541\plugin\network.h" />
+    <ClInclude Include="include\open62541\plugin\accesscontrol.h" />
+    <ClInclude Include="include\open62541\plugin\pki.h" />
+    <ClInclude Include="include\open62541\plugin\securitypolicy.h" />
+    <ClInclude Include="include\open62541\plugin\pubsub.h" />
+    <ClInclude Include="deps\ziptree.h" />
+    <ClInclude Include="deps\aa_tree.h" />
+    <ClInclude Include="include\open62541\plugin\nodestore.h" />
+    <ClInclude Include="include\open62541\server_pubsub.h" />
+    <ClInclude Include="include\open62541\server.h" />
+    <ClInclude Include="include\open62541\client.h" />
+    <ClInclude Include="include\open62541\client_highlevel.h" />
+    <ClInclude Include="include\open62541\client_subscriptions.h" />
+    <ClInclude Include="include\open62541\client_highlevel_async.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

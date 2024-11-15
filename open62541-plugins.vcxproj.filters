@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="plugins\ua_log_stdout.c" />
+    <ClCompile Include="plugins\ua_accesscontrol_default.c" />
+    <ClCompile Include="plugins\ua_nodestore_ziptree.c" />
+    <ClCompile Include="plugins\ua_nodestore_hashmap.c" />
+    <ClCompile Include="plugins\ua_config_default.c" />
+    <ClCompile Include="plugins\crypto\ua_pki_none.c" />
+    <ClCompile Include="plugins\crypto\ua_securitypolicy_none.c" />
+    <ClCompile Include="arch\win32\ua_clock.c" />
+    <ClCompile Include="arch\win32\ua_architecture_functions.c" />
+    <ClCompile Include="arch\network_tcp.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src_generated\open62541\config.h" />
+    <ClInclude Include="deps\ms_stdint.h" />
+    <ClInclude Include="include\open62541\architecture_definitions.h" />
+    <ClInclude Include="arch\win32\ua_architecture.h" />
+    <ClInclude Include="src_generated\open62541\statuscodes.h" />
+    <ClInclude Include="src_generated\open62541\nodeids.h" />
+    <ClInclude Include="include\open62541\common.h" />
+    <ClInclude Include="include\open62541\types.h" />
+    <ClInclude Include="src_generated\open62541\types_generated.h" />
+    <ClInclude Include="src_generated\open62541\types_generated_handling.h" />
+    <ClInclude Include="include\open62541\util.h" />
+    <ClInclude Include="include\open62541\plugin\log.h" />
+    <ClInclude Include="include\open62541\plugin\network.h" />
+    <ClInclude Include="include\open62541\plugin\accesscontrol.h" />
+    <ClInclude Include="include\open62541\plugin\pki.h" />
+    <ClInclude Include="include\open62541\plugin\securitypolicy.h" />
+    <ClInclude Include="include\open62541\plugin\pubsub.h" />
+    <ClInclude Include="deps\ziptree.h" />
+    <ClInclude Include="deps\aa_tree.h" />
+    <ClInclude Include="include\open62541\plugin\nodestore.h" />
+    <ClInclude Include="include\open62541\server_pubsub.h" />
+    <ClInclude Include="include\open62541\server.h" />
+    <ClInclude Include="include\open62541\client.h" />
+    <ClInclude Include="include\open62541\client_highlevel.h" />
+    <ClInclude Include="include\open62541\client_subscriptions.h" />
+    <ClInclude Include="include\open62541\client_highlevel_async.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A5B978E6-03B1-3029-8DFD-2FFE4987B01A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arch">
+      <UniqueIdentifier>{23061AE3-15F9-3554-806E-6A4B0F2E80B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arch\win32">
+      <UniqueIdentifier>{B0ED2629-A447-36BD-93EC-1ECB782D0CA1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps">
+      <UniqueIdentifier>{909EE09D-1D7E-39DB-B05D-D7741D7DEC12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{0181A9DD-01AA-375A-AC26-52D17C184D37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\open62541">
+      <UniqueIdentifier>{11D25AAC-E0AF-3730-AD32-E796190B71B9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\open62541\plugin">
+      <UniqueIdentifier>{C4D16250-FB29-3041-8FF0-509518B39412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins">
+      <UniqueIdentifier>{881BC99A-E33F-3B80-9C0B-DC8537AA0288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\crypto">
+      <UniqueIdentifier>{9925AE78-8D2F-3AAC-90CC-5C2D5106257F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_generated">
+      <UniqueIdentifier>{7C690F52-FE3A-3B7E-B59A-6D160952CDD8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src_generated\open62541">
+      <UniqueIdentifier>{3CF80F3D-5AAB-38B1-9D0D-D587BC774A76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
